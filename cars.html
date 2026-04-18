@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="cars.js" defer></script>
+    <title>Movify Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cars-page__header" >
+        <div class="container" >
+            <nav> 
+                <figure>
+                     <a href="index.html">
+
+                         <img class="nav__logo-img" src="assets/Movify.svg" alt="">
+                        </a>
+                </figure>               
+                     <ul class="nav__links" >
+                        <li><a class="nav__link nav__link--home" href="#">Home</a></li>
+                        <li><a class="nav__link" href="#">Explore</a></li>
+                        <li><a class="nav__link nav__link--contact" href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="cars-page__hero-content" >
+                    <h2 class="cars-page__hero-title">Discover Movies</h2>
+
+                    <div class="cars-page__search" >
+                        <input id="searchInput" class="cars-page__search-input" type="text" placeholder="Search by Make, Model or Keyword">
+                        <button id="searchBtn" class="cars-page__search-btn"><i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </header>
+
+    <main class="cars-page__main" >
+        <div class="container" >
+            <section class="cars-page__results" >
+                <div class="cars-page__top" >
+                    <h2 class="cars-page__results-title" >
+                        Search results: 
+                    </h2>
+
+                    <div class="cars-page__controls">
+                    <select id="sortSelect">
+                        <option value="newest">Newest to Oldest</option>
+                        <option value="oldest">Oldest to Newest</option>
+                    </select>
+                    </div>
+                </div>
+                <div id="carsList" class="cars-page__list">
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+        <footer class="footer">
+        <div class="footer__container">
+            <h3>Movify</h3>
+            <p>ⓒ 2026 Movify. All rights reserved.</p>
+            <div class="footer__links">
+                <a href="#">Home</a>
+                <a href="#">Discover</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,731 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+    
+h1 {
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.purple {
+    color: #6030b1;
+}
+
+#landing {
+    padding: 20px 32px 0;
+}
+
+.landing__content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.landing__title {
+    font-size: 56px;
+    margin-bottom: 16px;
+    color: #6030b1;
+}
+
+.landing__sub-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.landing__img {
+    width: 100%;
+    max-width: 480px;
+    margin: 40px auto 0 auto;
+    display: block;
+}
+    
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.search input {
+    width: 520px;
+    height: 70px;
+    padding: 0 15px;
+    border-radius: 20px;
+    border: 1px solid #0a1f44;
+    font-size: 24px;
+}
+
+.search__btn {
+    width: 150px;
+    height: 70px;
+    border: none;
+    border-radius: 20px;
+    background-color: #6030b1;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.search__btn:hover {
+background: #ff328f;
+}
+    
+/*
+
+NAV
+
+*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo-img {
+    height: 60px;
+    width: auto;
+}
+.cars-page__header .nav__logo-img {
+    filter: drop-shadow(0 0 1px white)
+    drop-shadow(0 0 1px white)
+    drop-shadow(0 0 1px white);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #2b2d42;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s ease;
+}
+
+.nav__link:hover:not(.nav__link--contact)::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+   
+.nav__link--home {
+    color: #4338ca;
+}
+
+.nav__link--contact {
+    background-color: #6030b1;
+    border: 2px #5d3eff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-height: 48px;
+    max-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.cars-page__header .nav__link--contact {
+    background-color: #6030b1;
+}
+
+.cars-page__header .nav__link--contact:hover {
+    background-color: #f3f3f3;
+    color: #6030b1;
+}
+.nav__link--contact:hover {
+    background: rgb(93, 62, 255);
+    text-decoration: none;
+    color: white;
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.landing__title {
+    opacity: 0;
+    animation: fadeUp 1s ease-out 
+    forwards;
+}
+
+.landing__sub-title {
+    opacity: 0;
+    animation: fadeUp 1s ease-out
+     forwards;
+    animation-delay: 0.25s;
+}
+
+.search {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+
+.hero___scene {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -15px;
+}
+
+.scene {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    transform: translateX(-30px);
+}
+
+.landing__img {
+    width: 100%;
+    display: block;
+    max-width: 550px;
+    margin: 0 auto;
+  
+}
+
+
+/*
+
+
+CARS PAGE
+
+
+*/
+
+
+.cars-page__hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 56px;
+    gap: 20px;
+}
+
+.cars-page__search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+}
+
+.cars-page__search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-size: 16px;
+}
+
+.cars-page__search-btn {
+width: 52px;
+height: 52px;
+border: none;
+background: #6030b1;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+font-size: 18px;
+flex-shrink: 0;
+}
+
+.cars-page__search-btn:hover {
+    background: #ff328f;
+}
+
+.cars-page__hero-content h2 {
+    margin: 0;
+}
+
+.cars-page__main {
+    padding: 48px 0;
+}
+
+.cars-page__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.cars-page__results-title {
+font-size: 24px;
+margin: 0;
+}
+
+.no-results {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.cars-page__list {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    gap: 24px;
+   justify-content: center;
+}
+
+.cars-page__card {
+    width: 100%;
+    max-width: 280px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    padding-bottom: 8px;
+}
+
+.cars-page__card:hover {
+    transform: scale(1.03);
+}
+
+.cars-page__card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #f3f4f6;
+}
+
+.cars-page__card h3 {
+    font-size: 16px;
+    padding: 12px;
+}
+
+.cars-page__card p{
+    padding: 0 12px 12px;
+    color: gray;
+}
+
+
+.cars-page__controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#sorteSelect {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+#sortSelect:hover {
+    border-color: #5a16d2;
+}
+
+#sortSelect:focus {
+    border-color: #5a16d3;
+    box-shadow: 0 0 2px rgba(90, 2 , 210,0.2);
+
+}
+
+.cars-page__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cars-page__header {
+    position: relative;
+    min-height: 220px;
+    background-image: linear-gradient(rgba(18, 18, 50, 0.5)),
+     url("./assets/movieposter.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 260px;
+}
+
+.cars-page__header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 18, 50, 0.5);
+}
+
+.cars-page__header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cars-page__hero-content h2 {
+    color: white;
+}
+    
+.nav__link  {
+    color: white;
+}
+
+.skeleton {
+    background: linear-gradient(90deg,
+    #eeeeee 25%,
+    #dddddd 50%,
+    #eeeeee 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    
+}
+    @keyframes shimmer {
+        from {
+            background-position: 200% 0;
+        }
+        to {
+            background-position: -200% 0;
+    }
+    
+}
+
+
+
+.search__btn i {
+    transition: all 0.3s;
+}
+
+.search__btn.loading i {
+    display: none;
+}
+
+.search__btn.loading::after {
+    content: "\f110";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+#searchBtn i{
+    transition: all 0.3s;
+}
+
+#searchBtn.loading i {
+    display: none;
+}
+
+#searchBtn.loading::after {
+    content:"\f110";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
+#searchBtn:disable {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer__links {
+    margin-top: 10px;
+}
+
+.footer__links a {
+    color: #a78bfa;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer__links a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav__logo {
+        flex-shrink: 0;
+    }
+
+    .nav__logo-img {
+        width: 70px;
+        height: auto;
+        display: block;
+    }
+        
+
+    .nav__links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav__link{
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .nav__item {
+        flex-shrink: 1;
+    }
+    
+    .nav__link-contact {
+        padding: 6px 10px;
+    }
+
+
+    .nav__links {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        gap: 8px;
+    }
+    header {
+        padding: 20px 0;
+    }
+
+    .car-page__header {
+     padding: 20px 0 24px;
+    }
+
+    .cars-page__hero-title {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .cars-page__search-input, 
+    .cars-page__search-btn {
+        height: 56px;
+    }
+
+    .cars-page__top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    
+    .find-car-link,
+    .contact-btn {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .contact-btn {
+        font-size: 11px;
+        padding: 6px 10px;
+        white-space: nowrap;
+        width: auto;
+
+    }
+    
+    .search {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .search__btn {
+        width: 100%;
+    }
+    
+    .landing__content {
+        text-align: center;
+    }
+
+    .landing__title {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .landing__sub-title {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .landing__img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        max-width: 400px;
+    }
+
+    .car {
+        transform: scale(0.55);
+        transform-origin: center;
+    }
+
+    .car__wrap {
+        position: absolute;
+        left: auto;
+        right: -25px;
+        bottom: -40px;
+    }
+    .cars-page__search {
+    max-width: 100%;
+}
+
+.cars-page__search-input {
+    height: 52px;
+    font-size: 16px;
+    padding: 0 16px;
+    border-radius: 30px 0 0 30px;
+}
+
+.cars-page__search-btn {
+width: 60px;
+height: 52px;
+border-radius: 0 30px 30px 0;
+}
+
+    .hero__scene {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .footer {
+        padding: 30px 10px;
+    }
+    
+    .footer__links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px
+    }
+    
+    .cars-page__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .car__wrap.show-car {
+        animation: driveIn 1s ease-out forwards;
+    }
+    
+    
+
+        
+}
+
+@media (max-width: 480px){
+    .cars-page__top {
+        padding: 12px 0;
+    }
+    .cars-page__top h2 {
+    margin: 0 0 8px 0;
+    }
+    .cars-page__controls {
+        margin-top: 8px;
+    }
+      .cars-page__list {
+                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 20px;
+      }
+
+      .cars-page__search-input {
+        height: 48px;
+        font-size: 15px;
+        padding: 0 14px;
+
+      }
+
+      .cars-page__search-btn{
+        width: 56px;
+        height: 48px;
+    }
+
+    .nav__link:not(.nav__link--contact) {
+        display: none;
+    }
+
+        }
